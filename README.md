@@ -2,7 +2,7 @@
 Simplified version of the X86 processor built in Logisim
 32 bit processor with 8 registers and 24 address bit width RAM ~16.8MB.
 
-Implemented a Harvard architecture using only one RAM unit but appears as a Von Neumann architecture with instruction memory and data memory being stored in two different spots. 
+Implemented a Harvard architecture using only one RAM unit but appears as a Von Neumann architecture with instruction memory and data memory being stored serperately.
 
 Possesses Kernal Mode.
 Possesses TTY output screen. 
@@ -14,7 +14,8 @@ Important Addresses:
 0x00FFFE0C  DDR: Display Data Register, stores the ASCII value of the character to be displayed. 
 
 Outstanding issues:
-Need to test to make sure that it still works after I uploaded it.
+Need to test to make sure that it still works after I uploaded it. I unloaded and reloaded the additional libraries and need to make sure that the correct libraries were used. 
+
 
 To do:
 Upload some binaries such as "Hello world."
@@ -23,7 +24,8 @@ Upload C programs that convert spreadsheets to hex
 Write README.md
 Write datapath
 Explain what the shims do
+Explain what each of the additional library modules do.
 List the commands possible
 
 Expansion:
-Could add a keyboard input
+Could add a keyboard input. This really wouldn't be that useful. I wouldn't be able to write programs with the keyboard input because the ASCII needs to be converted into a textfile that I run through my compiler that converts it to hex that is read by logisim. Logism does not support this. 
